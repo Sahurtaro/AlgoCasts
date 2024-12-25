@@ -9,21 +9,15 @@
 //   reverseInt(-90) === -9
 
 // function reverseInt(n) {
-//   if (n === 0) {
-//     return 0;
-//   } else if (n > 0) {
-//     const reversed = n.toString().split('').reverse().join('');
-//     return parseInt(reversed);
-//   } else if (n < 0) {
-//     let reverso = n.toString().split('').reverse().join('');
-//     const negative = parseInt(reverso);
-
-//     return negative * -1;
+//   let reversed = n.toString().split('').reverse().join('');
+//   if (n < 0) {
+//     return -parseInt(reversed);
 //   }
+//   return parseInt(reversed);
 // }
 
 function reverseInt(n) {
-  const reversed = n.toString().split('').reverse().join('');
+  let reversed = n.toString().split('').reverse().join('');
 
   return parseInt(reversed) * Math.sign(n);
 }
